@@ -235,7 +235,7 @@ class Evaluation(object):
     with codecs.open(predicted_translations_f, 'wb', 'utf-8') as f:
       for t, predicted_translations_t in zip(thresholds, predicted_translations):
         f.write('threshold %1.1f\n' % t)
-        for ts in predicted_translations:
+        for ts in predicted_translations_t:
           ts = [t[0] for t in ts]
           f.write('\t'.join(ts))
           f.write('\n')
@@ -255,7 +255,7 @@ class Evaluation(object):
       rec_all_vals[i] = result_all.recall
       f1_1_vals[i] = result_top.f1
       f1_all_vals[i] = result_all.f1
-      predicted_targets.extend(predicted_targets_threshold)
+      predicted_targets.append(predicted_targets_threshold)
     results_top = Result(f1_1_vals, prec_1_vals, rec_1_vals)
     results_all = Result(f1_all_vals, prec_all_vals, rec_all_vals)
     return results_top, results_all, predicted_targets
