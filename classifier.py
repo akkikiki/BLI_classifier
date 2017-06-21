@@ -4,6 +4,7 @@ import operator
 
 import numpy as np
 import tensorflow as tf
+from six.moves import xrange
 
 import skipgram
 

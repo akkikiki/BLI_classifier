@@ -4,6 +4,7 @@ from __future__ import print_function
 import codecs
 import math
 import random
+from six.moves import xrange
 
 
 class BilexDataFeeder(object):

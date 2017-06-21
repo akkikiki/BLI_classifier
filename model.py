@@ -8,6 +8,7 @@ import features
 from io_ import embeddings_and_vocab, char_vocab, load_lexicon
 from candidate_generation import RandomCandidateGenerator, CandidateGenerator
 from training import Trainer, EpochLossLogger, BasicStatsLogger, Evaluation
+from six.moves import xrange
 import data
 
 EDIT_DISTANCE_FILE = 'edit_distance.npy'

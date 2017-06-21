@@ -5,6 +5,7 @@ from os import path
 import editdistance
 import numpy as np
 import tensorflow as tf
+from six.moves import xrange
 
 """
 In this module contains classes to create a feature vector for word pairs.

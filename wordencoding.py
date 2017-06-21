@@ -4,6 +4,7 @@ from tensorflow.python.framework import ops
 from tensorflow.python.ops import array_ops
 from tensorflow.python.ops import math_ops
 from tensorflow.python.ops.rnn import _reverse_seq
+from six.moves import xrange
 
 
 from component import Component

@@ -3,6 +3,7 @@ from __future__ import print_function
 import codecs
 import numpy as np
 import xml.etree.ElementTree as ET
+from six.moves import xrange
 
 
 def load_embeddings(filename, encoding='utf-8', binary=True, max=None, mwu_delim=None):

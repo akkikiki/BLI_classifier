@@ -3,6 +3,7 @@ from __future__ import print_function
 import random
 
 import numpy as np
+from six.moves import xrange
 
 
 class CandidateGenerator(object):
