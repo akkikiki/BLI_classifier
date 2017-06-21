@@ -281,7 +281,7 @@ class Evaluation(object):
   def evaluate(self, source_words, target_words, predicted_targets):
     top_1_translation_pairs, translation_pairs = extract_translations(
       self._training_lexicon, source_words, predicted_targets)
-    groundtruth = zip(source_words, target_words)
+    groundtruth = list(zip(source_words, target_words))
     result_top = eval_translations(groundtruth, top_1_translation_pairs)
     result_all = eval_translations(groundtruth, translation_pairs)
     return result_top, result_all
